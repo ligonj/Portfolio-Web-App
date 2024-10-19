@@ -1,0 +1,87 @@
+### CREATE documents.
+
+### CREATE 1
+POST http://localhost:3000/missions HTTP/1.1
+content-type: application/json
+
+{
+    "missionName": "James Webb Telescope",
+    "launchDate": "12-25-2021",
+    "distance": 1500000,
+    "unit": "kilometers"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/missions HTTP/1.1
+content-type: application/json
+
+{
+    "missionName": "Chandra X-ray Observatory",
+    "launchDate": "07-23-1999",
+    "distance": 139000,
+    "unit": "kilometers"
+}
+
+### CREATE 3
+POST http://localhost:3000/missions HTTP/1.1
+content-type: application/json
+
+{
+    "missionName": "Parker Solar Probe",
+    "launchDate": "08-12-2018",
+    "distance": 189000000,
+    "unit": "kilometers"
+}
+
+### CREATE 4
+POST http://localhost:3000/missions HTTP/1.1
+content-type: application/json
+
+{
+    "missionName": "Juno",
+    "launchDate": "08-05-2011",
+    "distance": 3000000000,
+    "unit": "kilometers"
+}
+
+### CREATE 5
+POST http://localhost:3000/missions HTTP/1.1
+content-type: application/json
+
+{
+    "missionName": "New Horizons",
+    "launchDate": "01-19-2006",
+    "distance": 8700000000000,
+    "unit": "kilometers"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/missions HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+GET http://localhost:3000/missions/664d472c2826a26ae3838542 HTTP/1.1
+
+
+### UPDATE document's year, by ID.
+PUT http://localhost:3000/missions/664d472c2826a26ae3838542 HTTP/1.1
+content-type: application/json
+
+{
+    "missionName": "James Webb Telescope",
+    "launchDate": "12-25-2021",
+    "distance": 1500000,
+    "unit": "kilometers"
+}
+
+### DELETE by ID:
+DELETE http://localhost:3000/missions/664d46722826a26ae383853e HTTP/1.1
+
+
+
+### RETRIEVE all documents:
+GET http://localhost:3000/missions HTTP/1.1
+
